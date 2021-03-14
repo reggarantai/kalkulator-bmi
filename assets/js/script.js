@@ -1,3 +1,9 @@
+// Author: Regga @reggarantai
+// https://regga.id/coding/
+
+// CLASSIFICATION OF OVERWEIGHT AND OBESITY BY BMI
+// https://www.nhlbi.nih.gov/files/docs/guidelines/ob_gdlns.pdf
+
 function hitung(){
   $('#hasil').hide();
 
