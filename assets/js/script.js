@@ -6,7 +6,6 @@
 
 function hitung(){
   $('#hasil').hide();
-  console.log('HITUNF');
   var hasil = 'Kamu <strong>Obesitas</strong> tingkat 3',
   className = 'bg-danger-2 text-white',
   tinggi = $('#tinggi').val() / 100,
