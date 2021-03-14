@@ -6,7 +6,7 @@
 
 function hitung(){
   $('#hasil').hide();
-
+  console.log('HITUNF');
   var hasil = 'Kamu <strong>Obesitas</strong> tingkat 3',
   className = 'bg-danger-2 text-white',
   tinggi = $('#tinggi').val() / 100,
@@ -46,11 +46,32 @@ function validate(){
 
 $(document).ready(function(){
 
-  $('#tinggi, #berat').change(function(){
-    validate()
-  });
+  var tinggi = $('#tinggi').val(),
+  berat = $('#berat').val();
+
   $('#tinggi, #berat').keyup(function(){
-    validate()
+    tinggi = $('#tinggi').val();
+    berat = $('#berat').val();
+    validate();
+  });
+
+  $('#tinggi, #berat').change(function(){
+
+    // Untuk menghindari dobel proses karena pengaruh keyup, maka perlu diset kondisi
+    var change = true,
+    tinggiSaatIni = $('#tinggi').val(),
+    beratSaatIni = $('#berat').val();
+
+    if(
+      ($(this).attr('id') == 'tinggi' && tinggiSaatIni == tinggi)
+      || ($(this).attr('id') == 'berat' && beratSaatIni == berat)
+    ) {
+      change = false;
+    }
+
+    if(change){
+      validate()
+    }
   });
 
 });
