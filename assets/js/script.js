@@ -46,16 +46,10 @@ function validate(){
 
 $(document).ready(function(){
 
-  $('#tinggi').change(function(){
+  $('#tinggi, #berat').change(function(){
     validate()
   });
-  $('#tinggi').keyup(function(){
-    validate()
-  });
-  $('#berat').change(function(){
-    validate()
-  });
-  $('#berat').keyup(function(){
+  $('#tinggi, #berat').keyup(function(){
     validate()
   });
 
