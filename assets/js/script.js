@@ -10,7 +10,7 @@ function hitung(){
   className = 'bg-danger-2 text-white',
   tinggi = $('#tinggi').val() / 100,
   berat = $('#berat').val(),
-  bmi = (berat / ( tinggi * tinggi )).toFixed(1);
+  bmi = (berat / Math.pow( tinggi, 2 )).toFixed(1);
 
   if(bmi < 18.5){
     hasil = 'Berat badan kamu <strong>Kurang</strong>';
