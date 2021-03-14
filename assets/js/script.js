@@ -11,11 +11,11 @@ function hitung(){
     hasil = 'Berat badan kamu <strong>Kurang</strong>';
     className = 'bg-orange text-white';
   }
-  if(bmi >= 18.5 && bmi < 23){
+  if(bmi >= 18.5 && bmi < 25){
     hasil = 'Berat badan kamu <strong>Normal</strong>';
     className = 'bg-success text-white';
   }
-  if(bmi >= 23 && bmi < 30){
+  if(bmi >= 25 && bmi < 30){
     hasil = 'Berat badan kamu <strong>Berlebih</strong>';
     className = 'bg-warning text-dark';
   }
