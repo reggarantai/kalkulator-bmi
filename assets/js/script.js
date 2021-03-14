@@ -23,36 +23,23 @@ function hitung(){
   ).fadeIn();
 }
 
+function validate(){
+  $('#tinggi').val() > 50 && $('#berat').val() > 30 ? hitung() : $('#hasil').html('');
+}
+
 $(document).ready(function(){
 
   $('#tinggi').change(function(){
-    if($(this).val() > 50 && $('#berat').val() > 30) {
-      hitung();
-    }else{
-      $('#hasil').html('');
-    }
+    validate()
   });
   $('#tinggi').keyup(function(){
-    if($(this).val() > 50 && $('#berat').val() > 30) {
-      hitung();
-    }else{
-      $('#hasil').html('');
-    }
+    validate()
   });
-
   $('#berat').change(function(){
-    if($(this).val() > 30 && $('#tinggi').val() > 50) {
-      hitung();
-    }else{
-      $('#hasil').html('');
-    }
+    validate()
   });
   $('#berat').keyup(function(){
-    if($(this).val() > 30 && $('#tinggi').val() > 50) {
-      hitung();
-    }else{
-      $('#hasil').html('');
-    }
+    validate()
   });
 
 });
